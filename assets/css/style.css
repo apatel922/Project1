@@ -15,26 +15,21 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.438);
 }
 #mainBlock {
-    background:
-        linear-gradient(0deg,
-        rgba(0, 0, 0, 0.72), 
-        rgba(0, 0, 0, 0.72)), 
-        url(Imgs/weathersHiRes.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 25rem;
+    height: 100%;
     position: relative;
     transition: .4s ease;
 }
-
 .ui.two.column.grid {
     margin: 40px;
 }
-
 .articleCard {
     height: 200px;
 }
-
 .artDesc {
     padding-top: 12px;
+}
+#earth_div {
+    height: 100%;
 }
