@@ -26,3 +26,15 @@
     position: relative;
     transition: .4s ease;
 }
+
+.ui.two.column.grid {
+    margin: 40px;
+}
+
+.articleCard {
+    height: 200px;
+}
+
+.artDesc {
+    padding-top: 12px;
+}
