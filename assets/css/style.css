@@ -1,0 +1,28 @@
+
+#headFont {
+    font-family: 'Spartan';
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding-top: 24px;
+    color: white;
+}
+.skyFont {
+    font-weight: 600;
+    color: #44bbff;
+}
+.ui.large.menu {
+    background-color: #091a2e;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.438);
+}
+#mainBlock {
+    background:
+        linear-gradient(0deg,
+        rgba(0, 0, 0, 0.72), 
+        rgba(0, 0, 0, 0.72)), 
+        url(Imgs/weathersHiRes.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 25rem;
+    position: relative;
+    transition: .4s ease;
+}
