@@ -1,4 +1,11 @@
 
+body {
+    background-color: #000000;
+    height: auto;
+}
+.ui.inverted.segment, .ui.primary.inverted.segment {
+    padding: 0px;
+}
 #headFont {
     font-family: 'Spartan';
     font-weight: 400;
@@ -11,25 +18,68 @@
     color: #44bbff;
 }
 .ui.large.menu {
-    background-color: #091a2e;
+    background-color: #071422bc;
     border-bottom: 1px solid rgba(255, 255, 255, 0.438);
 }
-#mainBlock {
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    position: relative;
-    transition: .4s ease;
+#artHeader {
+    font-family: "Spartan";
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: #e2f4ff;
+    padding-bottom: 14px;
+    padding-top: 36px;
 }
-.ui.two.column.grid {
-    margin: 40px;
+
+/* Card styling */
+h3 {
+    font-family: "Spartan";
+    font-weight: 500;
+    color: #ffffff;
 }
-.articleCard {
-    height: 200px;
+.ui.fluid.card.articleCard {
+    background-color: #ffffff0c;
+    border: none;
 }
 .artDesc {
     padding-top: 12px;
+    font-family: "Spartan";
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
 }
+.image {
+    margin: 10px;
+    height: 50%;
+    width: auto;
+    border-radius: 4px;
+}
+
+
 #earth_div {
-    height: 100%;
+    opacity: 85%;
+    min-height: 12rem;
+    background: 
+        linear-gradient(0deg,
+        rgba(0, 0, 0, 0.82), 
+        rgba(0, 0, 0, 0.82)), 
+        url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow-y: scroll;
+}
+/* Image reacting to mouse location */
+#mainBlock {
+    margin-top: 64px;
+    /* Mouse moving image */
+    --x: 0px;
+    --y: 0px;
+    background-image: url(milky-way-and-starry-night-sky.jpg);
+    background-position: var(--x) var(--y);
+    background-size: contain;
+    /* Inset shadow */
+    -webkit-box-shadow: inset 0px 0px 69px 63px rgba(0,0,0,1);
+    -moz-box-shadow: inset 0px 0px 69px 63px rgba(0,0,0,1);
+    box-shadow: inset 0px 0px 69px 63px rgba(0,0,0,1);
+    
 }

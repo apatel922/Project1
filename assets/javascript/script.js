@@ -1,6 +1,5 @@
 $(document).ready(function (){
 
-
     var trackerQueryURL = "https://coronavirus-tracker-api.herokuapp.com/all"
 
         $.ajax({
@@ -67,16 +66,19 @@ $(document).ready(function (){
 
 
 
-        
+
     }
 
     initialize()
 
-    
 
-    
+    // Moving Space backg by mouse location
+    var forcePush = document.querySelector("#mainBlock");
 
-
+    forcePush.addEventListener("mousemove", function(e) {
+        forcePush.style.backgroundPositionX = (-e.offsetX / 15) + "px";
+        forcePush.style.backgroundPositionY = (-e.offsetY / 15) + "px";
+    });
 
 
 });
