@@ -1,4 +1,10 @@
 
+body {
+    background-color: #091a2e;
+}
+.ui.inverted.segment, .ui.primary.inverted.segment {
+    padding: 0px;
+}
 #headFont {
     font-family: 'Spartan';
     font-weight: 400;
@@ -11,15 +17,9 @@
     color: #44bbff;
 }
 .ui.large.menu {
+    
     background-color: #091a2e;
     border-bottom: 1px solid rgba(255, 255, 255, 0.438);
-}
-#mainBlock {
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    position: relative;
-    transition: .4s ease;
 }
 .ui.two.column.grid {
     margin: 40px;
@@ -31,5 +31,22 @@
     padding-top: 12px;
 }
 #earth_div {
-    height: 100%;
+    min-height: 12rem;
+    background: 
+        linear-gradient(0deg,
+        rgba(0, 0, 0, 0.72), 
+        rgba(0, 0, 0, 0.72)), 
+        url(milky-way-and-starry-night-sky.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow-y: scroll;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.438);
+}
+/* Image reacting to mouse location */
+#mainBlock {
+    --x: 0px;
+    --y: 0px;
+    background-image: url(milky-way-and-starry-night-sky.jpg);
+    background-position: var(--x) var(--y);
 }
