@@ -31,6 +31,7 @@ body {
     padding-top: 12px;
 }
 #earth_div {
+    opacity: 85%;
     min-height: 12rem;
     background: 
         linear-gradient(0deg,
@@ -41,10 +42,6 @@ body {
     background-size: cover;
     position: relative;
     overflow-y: scroll;
-    /* Inset shadow */
-    -webkit-box-shadow: inset 0px 0px 69px 63px rgba(0,0,0,1);
-    -moz-box-shadow: inset 0px 0px 69px 63px rgba(0,0,0,1);
-    box-shadow: inset 0px 0px 69px 63px rgba(0,0,0,1);
 }
 /* Image reacting to mouse location */
 #mainBlock {
@@ -55,4 +52,8 @@ body {
     background-image: url(milky-way-and-starry-night-sky.jpg);
     background-position: var(--x) var(--y);
     background-size: contain;
+    /* Inset shadow */
+    -webkit-box-shadow: inset 0px 0px 69px 63px rgba(0,0,0,1);
+    -moz-box-shadow: inset 0px 0px 69px 63px rgba(0,0,0,1);
+    box-shadow: inset 0px 0px 69px 63px rgba(0,0,0,1);
 }
