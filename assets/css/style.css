@@ -24,12 +24,33 @@ body {
 .ui.two.column.grid {
     margin: 40px;
 }
-.articleCard {
-    height: 200px;
+/* Card styling */
+h2 {
+    font-family: "Spartan";
+    font-weight: 500;
+    color: #44bbff;
+}
+.ui.fluid.card.articleCard {
+    background-color: #ffffff0c;
+    border: 1px solid rgba(255, 255, 255, 0.438);
 }
 .artDesc {
     padding-top: 12px;
+    font-family: "Spartan";
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
 }
+.image {
+    margin: 10px;
+    width: auto;
+    border-radius: 4px;
+}
+.ui.card>.image:not(.ui)>img, .ui.cards>.card>.image:not(.ui)>img {
+    border: 4px solid rgba(255, 255, 255, 0.048);
+}
+
+
 #earth_div {
     opacity: 85%;
     min-height: 12rem;
@@ -56,4 +77,5 @@ body {
     -webkit-box-shadow: inset 0px 0px 69px 63px rgba(0,0,0,1);
     -moz-box-shadow: inset 0px 0px 69px 63px rgba(0,0,0,1);
     box-shadow: inset 0px 0px 69px 63px rgba(0,0,0,1);
+    
 }

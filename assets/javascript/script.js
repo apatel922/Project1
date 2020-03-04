@@ -72,10 +72,10 @@ $(document).ready(function (){
 
     initialize()
 
-    // Moving backg by mouse location
+    // Moving Space backg by mouse location
     var forcePush = document.querySelector("#mainBlock");
 
-    document.addEventListener("mousemove", function(e) {
+    forcePush.addEventListener("mousemove", function(e) {
         forcePush.style.backgroundPositionX = (-e.offsetX / 20) + "px";
         forcePush.style.backgroundPositionY = (-e.offsetY / 20) + "px";
     });
