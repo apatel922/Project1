@@ -21,18 +21,20 @@ body {
     background-color: #071422bc;
     border-bottom: 1px solid rgba(255, 255, 255, 0.438);
 }
-.ui.two.column.grid {
-    margin: 40px;
+
+
+#artContainer {
+    overflow: scroll;
 }
 /* Card styling */
-h2 {
+h3 {
     font-family: "Spartan";
     font-weight: 500;
-    color: #44bbff;
+    color: #98d9ff;
 }
 .ui.fluid.card.articleCard {
     background-color: #ffffff0c;
-    border: 1px solid rgba(255, 255, 255, 0.438);
+    border: none;
 }
 .artDesc {
     padding-top: 12px;
@@ -43,11 +45,9 @@ h2 {
 }
 .image {
     margin: 10px;
+    height: 50%;
     width: auto;
     border-radius: 4px;
-}
-.ui.card>.image:not(.ui)>img, .ui.cards>.card>.image:not(.ui)>img {
-    border: 4px solid rgba(255, 255, 255, 0.048);
 }
 
 
