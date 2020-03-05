@@ -99,7 +99,7 @@ $(document).ready(function (){
         // Log the queryURL
         console.log(queryURL);
 
-        // Log the resulting object
+        // Log the resulting object.
        
          var i;
          for (i = 0; i <= 20; i++) {
