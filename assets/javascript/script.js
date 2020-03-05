@@ -55,10 +55,10 @@ $(document).ready(function (){
     
             var italy = WE.marker([45, 11]).addTo(earth);
             italy.bindPopup("<h1>Italy</h1><ul><li>Confirmed Cases: "  + italyCases + "</li><li>Confirmed Deaths: " + italyDeaths + "</li></ul>", {maxWidth: 150, closeButton: true}).openPopup();
-            console.log(europe);
+            
     
             var iran = WE.marker([30, 57]).addTo(earth);
-            africa.bindPopup("<h1>Iran/h1><ul><li>Confirmed Cases: "  + iranCases + "</li><li>Confirmed Deaths: " + iranDeaths + "</li></ul>", {maxWidth: 150, closeButton: true}).openPopup();
+            iran.bindPopup("<h1>Iran/h1><ul><li>Confirmed Cases: "  + iranCases + "</li><li>Confirmed Deaths: " + iranDeaths + "</li></ul>", {maxWidth: 150, closeButton: true}).openPopup();
     
             var china = WE.marker([30, 103]).addTo(earth);
             china.bindPopup("<h1>China</h1><ul><li>Confirmed Cases: "  + chinaCases + "</li><li>Confirmed Deaths: " + chinaDeaths + "</li></ul>", {maxWidth: 120, closeButton: true}).openPopup();
