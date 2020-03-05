@@ -3,6 +3,21 @@ body {
     background-color: #000000;
     height: auto;
 }
+#floatBlock {
+    display: block;
+    float: right;
+    background-color: ffffff0c;
+    z-index: 1;
+    margin: 40px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+#deathToll {
+    font-family: "Spartan";
+    font-weight: 300;
+    padding: 24px;
+    font-size: 18px;
+}
 .ui.inverted.segment, .ui.primary.inverted.segment {
     padding: 0px;
 }
@@ -18,7 +33,7 @@ body {
     color: #44bbff;
 }
 .ui.large.menu {
-    background-color: #071422bc;
+    background-color: #071422f3;
     border-bottom: 1px solid rgba(255, 255, 255, 0.438);
 }
 #artHeader {
