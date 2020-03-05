@@ -1,3 +1,5 @@
+
+
 $(document).ready(function (){
 
 
@@ -24,10 +26,10 @@ $(document).ready(function (){
             
             //World Data
             var cases = response.confirmed.latest;
-            console.log(cases);
-
             var deaths = response.deaths.latest;
-            console.log(deaths);
+           
+            $("#deathToll").text("Deaths: " + deaths + "/" + "Cases:" + cases);
+            console.log(cases)
 
             // Italy Data
 
@@ -58,7 +60,7 @@ $(document).ready(function (){
             
     
             var iran = WE.marker([30, 57]).addTo(earth);
-            iran.bindPopup("<h1>Iran/h1><ul><li>Confirmed Cases: "  + iranCases + "</li><li>Confirmed Deaths: " + iranDeaths + "</li></ul>", {maxWidth: 150, closeButton: true}).openPopup();
+            iran.bindPopup("<h1>Iran</h1><ul><li>Confirmed Cases: "  + iranCases + "</li><li>Confirmed Deaths: " + iranDeaths + "</li></ul>", {maxWidth: 150, closeButton: true}).openPopup();
     
             var china = WE.marker([30, 103]).addTo(earth);
             china.bindPopup("<h1>China</h1><ul><li>Confirmed Cases: "  + chinaCases + "</li><li>Confirmed Deaths: " + chinaDeaths + "</li></ul>", {maxWidth: 120, closeButton: true}).openPopup();
@@ -80,13 +82,43 @@ $(document).ready(function (){
     initialize()
 
 
-    // Moving Space backg by mouse location
-    var forcePush = document.querySelector("#mainBlock");
+    // This is our API key
+    var APIKey = "957a4ac1e2724200a4a1249397e81c87";
 
-    forcePush.addEventListener("mousemove", function(e) {
-        forcePush.style.backgroundPositionX = (-e.offsetX / 15) + "px";
-        forcePush.style.backgroundPositionY = (-e.offsetY / 15) + "px";
-    });
+    // Here we are building the URL we need to query the database
+    var queryURL = "http://newsapi.org/v2/everything?q=coronavirus&from=2020-02-05&sortBy=publishedAt&apiKey=" + APIKey;
+
+    // Here we run our AJAX call to the OpenWeatherMap API
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    })
+      // We store all of the retrieved data inside of an object called "response"
+      .then(function(response) {
+
+        // Log the queryURL
+        console.log(queryURL);
+
+        // Log the resulting object
+       
+         var i;
+         for (i = 0; i <= 20; i++) {
+           
+          var article=response.articles[i].description
+          console.log(article)
+  
+          var title=response.articles[i].title
+          console.log(title)
+  
+          var url=response.articles[i].url
+          console.log(url)
+  
+          var author=response.articles[i].author
+          console.log(author)
+        }
+
+
+      });
 
 
 });
