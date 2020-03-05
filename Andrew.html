@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <title>Conna Virus Data</title>
 </head>
+
 <body>
-    
+  <!-- Retrieved data will be dumped here -->
+  <div class=""></div>
+  <div class=""></div>
+  <div class=""></div>
+  <div class=""></div>
+
+  <!-- Add extra div for the bonus Fahrenheit temp -->
+  <div class=""></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // This is our API key
+    var APIKey = "957a4ac1e2724200a4a1249397e81c87";
+
+    // Here we are building the URL we need to query the database
+    var queryURL = "http://newsapi.org/v2/everything?q=coronavirus&from=2020-02-05&sortBy=publishedAt&apiKey=" + APIKey;
+
+    // Here we run our AJAX call to the OpenWeatherMap API
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    })
+      // We store all of the retrieved data inside of an object called "response"
+      .then(function(response) {
+
+        // Log the queryURL
+        console.log(queryURL);
+
+        // Log the resulting object
+        console.log(response);
+
+        // Transfer content to HTML
+        $(".").html("<h1>" + response.name + " </h1>");
+        $(".").text(": " + response);
+        $(".").text(": " + response.main);
+        
+        // Convert the temp to fahrenheit
+      
+
+        // add temp content to html
+        $(".temp").text("Temperature (K) " + response.main.temp);
+        $(".tempF").text("Temperature (F) " + tempF.toFixed(2));
+
+        // Log the data in the console as well
+        console.log(": " + response.wind.speed);
+        console.log(": " + response.main.humidity);
+        console.log(": " + tempF);
+      });
+  </script>
 </body>
+
 </html>
