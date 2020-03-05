@@ -6,17 +6,20 @@ body {
 #floatBlock {
     display: block;
     float: right;
-    background-color: ffffff0c;
+    background-color: #ffffff0c;
     z-index: 1;
     margin: 40px;
     border: 1px solid white;
     border-radius: 4px;
+    width: auto;
+    height: auto;
 }
 #deathToll {
     font-family: "Spartan";
     font-weight: 300;
     padding: 24px;
     font-size: 18px;
+    color: white;
 }
 .ui.inverted.segment, .ui.primary.inverted.segment {
     padding: 0px;
@@ -48,8 +51,10 @@ body {
 /* Card styling */
 h3 {
     font-family: "Spartan";
+    font-size: 24px;
     font-weight: 500;
     color: #ffffff;
+    padding-top: 10px;
 }
 .ui.fluid.card.articleCard {
     background-color: #ffffff0c;
@@ -60,10 +65,20 @@ h3 {
     transition: .3s ease-in;
     transition: .15s ease-out;
 }
+.artDate,
 .artDesc {
     padding-top: 12px;
+    padding-bottom: 4px;
     font-family: "Spartan";
     color: white;
+    font-weight: 300;
+    font-size: 14px;
+}
+.artBy,
+.artAuthor {
+    padding-top: 12px;
+    font-family: "Spartan";
+    color: rgb(164, 164, 164);
     font-weight: 300;
     font-size: 14px;
 }
@@ -73,8 +88,9 @@ h3 {
     width: auto;
     border-radius: 4px;
 }
-
-
+.we-pp-content {
+    color:black;
+}
 #earth_div {
     opacity: 85%;
     min-height: 12rem;
