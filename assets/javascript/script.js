@@ -26,10 +26,10 @@ $(document).ready(function (){
             
             //World Data
             var cases = response.confirmed.latest;
-            console.log(cases);
-
             var deaths = response.deaths.latest;
-            console.log(deaths);
+           
+            $("#deathToll").text(deaths + "/" + cases);
+            console.log(cases)
 
             // Italy Data
 
@@ -60,7 +60,7 @@ $(document).ready(function (){
             
     
             var iran = WE.marker([30, 57]).addTo(earth);
-            iran.bindPopup("<h1>Iran/h1><ul><li>Confirmed Cases: "  + iranCases + "</li><li>Confirmed Deaths: " + iranDeaths + "</li></ul>", {maxWidth: 150, closeButton: true}).openPopup();
+            iran.bindPopup("<h1>Iran</h1><ul><li>Confirmed Cases: "  + iranCases + "</li><li>Confirmed Deaths: " + iranDeaths + "</li></ul>", {maxWidth: 150, closeButton: true}).openPopup();
     
             var china = WE.marker([30, 103]).addTo(earth);
             china.bindPopup("<h1>China</h1><ul><li>Confirmed Cases: "  + chinaCases + "</li><li>Confirmed Deaths: " + chinaDeaths + "</li></ul>", {maxWidth: 120, closeButton: true}).openPopup();
