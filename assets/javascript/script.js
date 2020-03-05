@@ -53,18 +53,18 @@ $(document).ready(function (){
             var earth = new WE.map('earth_div');
             WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
     
-            var europe = WE.marker([45, 11]).addTo(earth);
-            europe.bindPopup("<h1>Italy</h1><ul><li>Confirmed Cases: "  + italyCases + "</li><li>Confirmed Deaths: " + italyDeaths + "</li></ul><h1>Iran</h1>", {maxWidth: 150, closeButton: true}).openPopup();
+            var italy = WE.marker([45, 11]).addTo(earth);
+            italy.bindPopup("<h1>Italy</h1><ul><li>Confirmed Cases: "  + italyCases + "</li><li>Confirmed Deaths: " + italyDeaths + "</li></ul>", {maxWidth: 150, closeButton: true}).openPopup();
             console.log(europe);
     
-            var africa = WE.marker([30, 57]).addTo(earth);
-            africa.bindPopup("<h1>Iran/h1><ul><li>Confirmed Cases: "  + iranCases + "</li><li>Confirmed Deaths: " + iranDeaths + "</li></ul><h1>Iran</h1>", {maxWidth: 150, closeButton: true}).openPopup();
+            var iran = WE.marker([30, 57]).addTo(earth);
+            africa.bindPopup("<h1>Iran/h1><ul><li>Confirmed Cases: "  + iranCases + "</li><li>Confirmed Deaths: " + iranDeaths + "</li></ul>", {maxWidth: 150, closeButton: true}).openPopup();
     
             var china = WE.marker([30, 103]).addTo(earth);
             china.bindPopup("<h1>China</h1><ul><li>Confirmed Cases: "  + chinaCases + "</li><li>Confirmed Deaths: " + chinaDeaths + "</li></ul>", {maxWidth: 120, closeButton: true}).openPopup();
     
             var northAmerica = WE.marker([35, -100]).addTo(earth);
-            northAmerica.bindPopup("<h1>USA</h1><ul><li>Confirmed Cases: "  + usCases + "</li><li>Confirmed Deaths: " + usDeaths + "</li></ul><h1>Iran</h1>", {maxWidth: 120, closeButton: true}).openPopup();
+            northAmerica.bindPopup("<h1>USA</h1><ul><li>Confirmed Cases: "  + usCases + "</li><li>Confirmed Deaths: " + usDeaths + "</li></ul>", {maxWidth: 120, closeButton: true}).openPopup();
     
             earth.setView([0, 0], 3.5);
         
