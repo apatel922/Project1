@@ -28,7 +28,9 @@ $(document).ready(function (){
             var cases = response.confirmed.latest;
             var deaths = response.deaths.latest;
            
-            $("#deathToll").text("Deaths: " + deaths + "/" + "Cases:" + cases);
+            $("#deathToll").text(deaths);
+            $("#caseToll").text(cases);
+
             console.log(cases)
 
             // Italy Data
