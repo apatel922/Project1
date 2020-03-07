@@ -95,11 +95,11 @@ $(document).ready(function (){
 
     
 
-    $(document).on("click", "button", function () {
-
-        var country = $(this).attr("value")
+    $(document).on("click", "button", function (e) {
+        e.preventDefault();
+        var country = $(this).attr("value");
         
-       $("#articleContainer").empty()
+       $("#articleContainer").empty();
 
     // This is our API key
     var APIKey = "957a4ac1e2724200a4a1249397e81c87";
