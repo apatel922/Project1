@@ -1,25 +1,36 @@
 
 body {
     background-color: #000000;
-    height: auto;
+    min-height: 110%;
 }
 #floatBlock {
     display: block;
     background-color: #ffffff0c;
-    z-index: 1;
-    margin-top: 100px;
-    border: 1px solid white;
+    z-index: 3;
+    margin-top: 40px;
     border-radius: 4px;
     width: auto;
     height: auto;
 }
+#spacer {
+    height: 80px;
+}
+#coronaVD {
+    font-weight: 500;
+}
+#caseToll,
 #deathToll {
+    color: #44bbff;
+    font-weight: 500;
+}
+#footerStat {
     font-family: "Spartan";
     font-weight: 300;
-    padding: 24px;
-    font-size: 18px;
-    color: white;
-    text-align: left;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    padding-left: 24px;
+    padding-top: 14px;
 }
 .ui.inverted.segment, .ui.primary.inverted.segment {
     padding: 0px;
@@ -36,8 +47,15 @@ body {
     color: #44bbff;
 }
 .ui.large.menu {
-    background-color: #071422f3;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.438);
+    background-color: #1b1b1b;
+    height: 64px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.185);
+    border-top: 1px solid rgba(255, 255, 255, 0.185);  
+}
+.ui.large.bottom.menu {
+    height: 64px;
+    padding: 8px;
+    background-color: #1b1b1bec;
 }
 #artHeader {
     font-family: "Spartan";
@@ -53,7 +71,7 @@ h3 {
     font-family: "Spartan";
     font-size: 24px;
     font-weight: 500;
-    color: #ffffff;
+    color: #e0e0e0;
     padding-top: 10px;
 }
 .ui.fluid.card.articleCard {
@@ -61,16 +79,17 @@ h3 {
     border: none;
 }
 .ui.fluid.card.articleCard:hover {
-    background-color: #ffffff29;
+    background-color: #0c243df3;
     transition: .3s ease-in;
     transition: .15s ease-out;
+    color: white;
 }
 .artDate,
 .artDesc {
     padding-top: 12px;
     padding-bottom: 4px;
     font-family: "Spartan";
-    color: white;
+    color: #f6f6f6;
     font-weight: 300;
     font-size: 14px;
 }
@@ -128,5 +147,8 @@ h3 {
     #artHeader {
         font-size: 1.8rem;
         padding-top: 24px;
+    }
+    #footerStat {
+        font-size: 14px;
     }
 }
