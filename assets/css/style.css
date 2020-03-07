@@ -12,6 +12,21 @@ body {
     width: auto;
     height: auto;
 }
+.ui.search .prompt {
+    background-color: rgba(0, 0, 0, 0.247);
+    border-color: rgb(255, 255, 255);
+}
+
+.ui.search .prompt:focus {
+    background-color: rgba(0, 0, 0, 0.45);
+    border-color: white;
+}
+.ui.icon.input>input {
+    background-color: #1b1b1b;
+    color: white;
+    font-family: "Spartan";
+    padding-top: 15px;
+}
 #spacer {
     height: 80px;
 }

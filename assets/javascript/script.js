@@ -3,9 +3,9 @@
 $(document).ready(function (){
 
 
-    todaysDate = moment().format('L');
+    var lastMonth = moment().subtract(28, "days").format("YYYY-MM-DD");
 
-
+   
 
     function initialize() {
 
@@ -55,20 +55,20 @@ $(document).ready(function (){
 
 
             var earth = new WE.map('earth_div');
-            WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
+            WE.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
     
             var italy = WE.marker([45, 11]).addTo(earth);
-            italy.bindPopup("<h1>Italy</h1><ul><li>Confirmed Cases: "  + italyCases + "</li><li>Confirmed Deaths: " + italyDeaths + "</li></ul>", {maxWidth: 150, closeButton: true}).openPopup();
+            italy.bindPopup("<h1>Italy</h1><ul><li>Confirmed Cases: "  + italyCases + "</li><li>Confirmed Deaths: " + italyDeaths + "</li></ul>", {maxWidth: 150, closeButton: true});
             
     
             var iran = WE.marker([30, 57]).addTo(earth);
-            iran.bindPopup("<h1>Iran</h1><ul><li>Confirmed Cases: "  + iranCases + "</li><li>Confirmed Deaths: " + iranDeaths + "</li></ul>", {maxWidth: 150, closeButton: true}).openPopup();
+            iran.bindPopup("<h1>Iran</h1><ul><li>Confirmed Cases: "  + iranCases + "</li><li>Confirmed Deaths: " + iranDeaths + "</li></ul>", {maxWidth: 150, closeButton: true});
     
             var china = WE.marker([30, 103]).addTo(earth);
-            china.bindPopup("<h1>China</h1><ul><li>Confirmed Cases: "  + chinaCases + "</li><li>Confirmed Deaths: " + chinaDeaths + "</li></ul>", {maxWidth: 120, closeButton: true}).openPopup();
+            china.bindPopup("<h1>China</h1><ul><li>Confirmed Cases: "  + chinaCases + "</li><li>Confirmed Deaths: " + chinaDeaths + "</li></ul>", {maxWidth: 120, closeButton: true});
     
             var northAmerica = WE.marker([35, -100]).addTo(earth);
-            northAmerica.bindPopup("<h1>USA</h1><ul><li>Confirmed Cases: "  + usCases + "</li><li>Confirmed Deaths: " + usDeaths + "</li></ul>", {maxWidth: 120, closeButton: true}).openPopup();
+            northAmerica.bindPopup("<h1>USA</h1><ul><li>Confirmed Cases: "  + usCases + "</li><li>Confirmed Deaths: " + usDeaths + "</li></ul>", {maxWidth: 120, closeButton: true});
     
             earth.setView([0, 0], 3.5);
         
@@ -93,11 +93,18 @@ $(document).ready(function (){
     });
 
 
+    
+
+    $(document).on("click", "button", function () {
+
+        var country = $(this).attr("value")
+       $("#articleContainer").empty()
+
     // This is our API key
     var APIKey = "957a4ac1e2724200a4a1249397e81c87";
 
     // Here we are building the URL we need to query the database
-    var queryURL = "http://newsapi.org/v2/everything?q=coronavirus&from=2020-02-05&sortBy=publishedAt&apiKey=" + APIKey;
+    var queryURL = "https://newsapi.org/v2/top-headlines?q=coronavirus&from=" + lastMonth +"&sortBy=publishedAt&country=" + country + "&apiKey=" + APIKey;
 
     // Here we run our AJAX call to the OpenWeatherMap API
     $.ajax({
@@ -119,6 +126,8 @@ $(document).ready(function (){
             var title=response.articles[i].title
             var url=response.articles[i].url
             var author=response.articles[i].author
+
+            console.log(response)
 
             var div1 = $("<div>");
             div1.addClass("eight wide column");
@@ -159,6 +168,7 @@ $(document).ready(function (){
 
 
       });
+    });
 
 
 });
