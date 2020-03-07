@@ -55,7 +55,7 @@ $(document).ready(function (){
 
 
             var earth = new WE.map('earth_div');
-            WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
+            WE.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
     
             var italy = WE.marker([45, 11]).addTo(earth);
             italy.bindPopup("<h1>Italy</h1><ul><li>Confirmed Cases: "  + italyCases + "</li><li>Confirmed Deaths: " + italyDeaths + "</li></ul>", {maxWidth: 150, closeButton: true});
@@ -93,14 +93,18 @@ $(document).ready(function (){
     });
 
 
-    var country = ""
-    //$(document).on("click")
+    
+
+    $(document).on("click", "button", function () {
+
+        var country = $(this).attr("value")
+       $("#articleContainer").empty()
 
     // This is our API key
     var APIKey = "957a4ac1e2724200a4a1249397e81c87";
 
     // Here we are building the URL we need to query the database
-    var queryURL = "http://newsapi.org/v2/top-headlines?q=coronavirus&from=" + lastMonth +"&sortBy=publishedAt&country" + country + "&apiKey=" + APIKey;
+    var queryURL = "https://newsapi.org/v2/top-headlines?q=coronavirus&from=" + lastMonth +"&sortBy=publishedAt&country=" + country + "&apiKey=" + APIKey;
 
     // Here we run our AJAX call to the OpenWeatherMap API
     $.ajax({
@@ -164,6 +168,7 @@ $(document).ready(function (){
 
 
       });
+    });
 
 
 });
