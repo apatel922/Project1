@@ -68,8 +68,8 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.185);  
 }
 .ui.button:hover{
-    background-color: red;
-    font-family: "Spartan"
+    background-color: white;
+    
 }
 
 .ui.large.botton.menu {
