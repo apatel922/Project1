@@ -67,10 +67,15 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.185);
     border-top: 1px solid rgba(255, 255, 255, 0.185);  
 }
-.ui.large.bottom.menu {
+.ui.button:hover{
+    background-color: white;
+    
+}
+
+.ui.large.botton.menu {
     height: 64px;
     padding: 8px;
-    background-color: #1b1b1bec;
+    background-color:blue;
 }
 #artHeader {
     font-family: "Spartan";
