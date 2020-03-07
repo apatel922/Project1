@@ -160,10 +160,11 @@ $(document).ready(function (){
             var div5 = $("<div>");
             div5.addClass("ui divider");
             div5.attr("id", "div5")
-            p3 = $("<p>");
-            p3.addClass("artDate");
-            p3.attr("id","url");
-            p3.text(url)
+
+            p3 = $("<a>");
+            p3.attr("href",url);
+            p3.attr("target", "_blank");
+            p3.text("Go to Source")
 
             div1.append(div2);
             div2.append(div3);

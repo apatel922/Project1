@@ -19,7 +19,7 @@
 
     <!-- Jumbo block -->
     <div id="mainBlock" class="ui inverted vertical masthead center aligned segment"> 
-        <div class="container">
+        <div id="eContainer" class="container">
             <div id="earth_div"></div>
         </div>
     </div> 
@@ -32,21 +32,27 @@
       <div class="ui middle aligned stackable grid container">
         <div class="row">
           <div class="eight wide column">
-            <h1 id="artHeader">News&nbsp<span class="skyFont">Resources</span></h1>
+            <h1 id="artHeader">News by&nbsp<span class="skyFont">Location</span></h1>
           </div>
+          <div class="eight wide column">
+            <div id="buttonGrp">
+              <button class="ui button" value="gb">GBR</button>
+              <button class="ui button" value="us">USA</button>
+              <button class="ui button" value="in">India</button>
+              <button class="ui button" value="it">Italy</button>
+            </div>
+          </div>
+        </div>
+        <div class="ui divider"></div>
 
-          <div id="buttonGrp" class="eight wide column">
-            <button class="ui button" value="gb">GBR</button>
-            <button class="ui button" value="us">USA</button>
-            <button class="ui button" value="in">India</button>
-            <button class="ui button" value="it">Italy</button>
-          </div>
-          
+
+        <div class="row">
           <div id="articleContainer" class="ui middle aligned stackable grid container">
             <!-- Build article cards here -->
 
 
-            <!-- LEAVE THE CARDS BELOW FOR TROUBLESHOOTING STYLE -->
+            
+            <!-- LEAVE THE CARD BELOW FOR TROUBLESHOOTING STYLE -->
 
             <!-- <div id="div1" class="eight wide column">
               <div id="div2" class="ui fluid card articleCard">
@@ -68,7 +74,7 @@
 
 
     <!-- Bootleg spacer -->
-    <div id="spacer"></div>
+    <!-- <div id="spacer"></div> -->
 
     <!-- Footer -->
     <div class="ui large bottom fixed hidden menu">
