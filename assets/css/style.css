@@ -45,7 +45,7 @@ body {
     color: #ffffff;
     text-align: center;
     padding-left: 24px;
-    padding-top: 14px;
+    padding-top: 24px;
 }
 .ui.inverted.segment, .ui.primary.inverted.segment {
     padding: 0px;
@@ -69,7 +69,6 @@ body {
 }
 .ui.button:hover{
     background-color: white;
-    
 }
 
 .ui.large.botton.menu {
@@ -95,7 +94,7 @@ h3 {
     padding-top: 10px;
 }
 .ui.fluid.card.articleCard {
-    background-color: #ffffff0c;
+    background-color: #ffffff23;
     border: none;
 }
 .ui.fluid.card.articleCard:hover {
@@ -114,7 +113,8 @@ h3 {
     font-size: 14px;
 }
 .artBy,
-.artAuthor {
+.artAuthor,
+#author {
     padding-top: 12px;
     font-family: "Spartan";
     color: rgb(164, 164, 164);
