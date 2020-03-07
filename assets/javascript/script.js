@@ -98,6 +98,7 @@ $(document).ready(function (){
     $(document).on("click", "button", function () {
 
         var country = $(this).attr("value")
+        
        $("#articleContainer").empty()
 
     // This is our API key
