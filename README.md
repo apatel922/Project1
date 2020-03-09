@@ -148,7 +148,7 @@ $("#articleContainer").append(div1)
 ```
 This yielded a long, scrolling page, but it didn't emphasize the globe as the page's focus since it gets lost when the user scrolls down through the articles.  We solved this by giving the #articleContainer a fixed height and overflow: auto.
 
-The last consideration in our site's design was interaction.  We created user involvement with a button group that filters the article feed by location.  In the gif above, you can see how clicking one of these buttons will list articles relevant to that location (in this case, Great Britain).   
+The last consideration in our site's design was interaction.  We created user involvement with a button group that filters the article feed by location.  In the gif below, you can see how clicking one of these buttons will list articles relevant to that location (in this case, Great Britain).   
 
 
 ![](assets\css\articleFeed.gif)
