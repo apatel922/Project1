@@ -1,6 +1,7 @@
 #### Project 1
 
-# Pandemic UI  https://github.com/apatel922/Project1
+# Pandemic UI  
+## https://apatel922.github.io/Project1/
 
 <br>
 
