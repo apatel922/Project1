@@ -1,17 +1,16 @@
 
 body {
     background-color: #000000;
-    min-height: 110%;
 }
-#floatBlock {
+/* #floatBlock {
     display: block;
     background-color: #ffffff0c;
-    z-index: 3;
+    z-index: 1;
     margin-top: 40px;
     border-radius: 4px;
     width: auto;
     height: auto;
-}
+} */
 .ui.search .prompt {
     background-color: rgba(0, 0, 0, 0.247);
     border-color: rgb(255, 255, 255);
@@ -26,9 +25,6 @@ body {
     color: white;
     font-family: "Spartan";
     padding-top: 15px;
-}
-#spacer {
-    height: 80px;
 }
 #coronaVD {
     font-weight: 500;
@@ -45,7 +41,7 @@ body {
     color: #ffffff;
     text-align: center;
     padding-left: 24px;
-    padding-top: 24px;
+    padding-top: 16px;
 }
 .ui.inverted.segment, .ui.primary.inverted.segment {
     padding: 0px;
@@ -67,22 +63,30 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.185);
     border-top: 1px solid rgba(255, 255, 255, 0.185);  
 }
-.ui.button:hover{
-    background-color: white;
+.ui.button {
+    background-color: #1b1b1b;
+    color: white;
+}
+.ui.button:focus{
+    background-color: #44bbff;
 }
 
-.ui.large.botton.menu {
+.ui.large.bottom.menu {
     height: 64px;
     padding: 8px;
-    background-color:blue;
 }
-#artHeader {
+#artHeader,
+#buttonGrp {
     font-family: "Spartan";
     font-weight: 300;
     font-size: 2.5rem;
     color: #e2f4ff;
-    padding-bottom: 14px;
-    padding-top: 36px;
+    padding-top: 24px;
+}
+#articleContainer {
+    height: 500px;
+    margin-bottom: 46px;
+    overflow: auto;
 }
 
 /* Card styling */
@@ -98,12 +102,11 @@ h3 {
     border: none;
 }
 .ui.fluid.card.articleCard:hover {
-    background-color: #0c243df3;
+    background-color: #1a2d41be;
     transition: .3s ease-in;
     transition: .15s ease-out;
     color: white;
 }
-.artDate,
 .artDesc {
     padding-top: 12px;
     padding-bottom: 4px;
@@ -111,6 +114,12 @@ h3 {
     color: #f6f6f6;
     font-weight: 300;
     font-size: 14px;
+}
+a {
+    font-size: 1.25rem;
+}
+a:hover {
+    color: #44bbff;
 }
 .artBy,
 .artAuthor,
@@ -165,10 +174,17 @@ h3 {
         margin: 3.2rem;
     }
     #artHeader {
-        font-size: 1.8rem;
         padding-top: 24px;
+        text-align: center;
     }
     #footerStat {
         font-size: 14px;
+        padding-top: 8px;
+    }
+   #buttonGrp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: none;
     }
 }
