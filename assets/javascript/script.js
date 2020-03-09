@@ -31,26 +31,31 @@ $(document).ready(function (){
             $("#deathToll").text(deaths);
             $("#caseToll").text(cases);
 
-            console.log(cases)
-
             // Italy Data
 
-            var italyCases = response.confirmed.locations[59].latest
-            var italyDeaths = response.deaths.locations[59].latest
+            var italyCases = 0; 
+            var italyDeaths = 0;
 
             // US Data
             usCases = 0;
             usDeaths = 0;
+
+            //Iran Data
+            iranCases = 0;
+            iranDeaths = 0;
+
             for ( var x = 0; x < 159; x++) {
             if (response.confirmed.locations[x].country === "US") {
             usCases +=  response.confirmed.locations[x].latest
             usDeaths += response.deaths.locations[x].latest
-            }
-            }
+            } else if (response.confirmed.locations[x].country === "Iran"){
+            iranDeaths+= response.deaths.locations[x].latest
+            iranCases+= response.confirmed.locations[x].latest
+            } else if (response.confirmed.locations[x].country === "Italy")
+            italyCases+= response.confirmed.locations[x].latest
+            italyDeaths+= response.deaths.locations[x].latest
+            };
             
-            // Iran Data
-            iranCases = response.confirmed.locations[74].latest
-            iranDeaths = response.deaths.locations[74].latest
         
 
 
@@ -95,10 +100,11 @@ $(document).ready(function (){
 
     
 
-    $(document).on("click", "button", function () {
-
-        var country = $(this).attr("value")
-       $("#articleContainer").empty()
+    $(document).on("click", "button", function (e) {
+        e.preventDefault();
+        var country = $(this).attr("value");
+        
+       $("#articleContainer").empty();
 
     // This is our API key
     var APIKey = "957a4ac1e2724200a4a1249397e81c87";
@@ -165,7 +171,7 @@ $(document).ready(function (){
             $("#articleContainer").append(div1)
         
         }
-
+        
 
       });
     });
