@@ -1,12 +1,8 @@
-
-
 $(document).ready(function (){
-
-
+    // Added previous months date to capture a months worth of data News Org API
     var lastMonth = moment().subtract(28, "days").format("YYYY-MM-DD");
 
-   
-
+   // Function to run corona-virus Api
     function initialize() {
 
         var trackerQueryURL = "https://coronavirus-tracker-api.herokuapp.com/all"
@@ -16,7 +12,8 @@ $(document).ready(function (){
             method: "GET"
         }).then(function (response){
             console.log(response)
-            // China Data
+            
+            // For loop to gather information in the array that mathes location:China
             var chinaCases = 0;
             var chinaDeaths =0;
             for (var i = 0; i < 30; i++ ) {
@@ -24,26 +21,28 @@ $(document).ready(function (){
                 chinaDeaths+=(response.deaths.locations[i].latest);
             }
             
-            //World Data
+            // Variable to get the latest number of cases and deaths worlwide
             var cases = response.confirmed.latest;
             var deaths = response.deaths.latest;
            
+            // Added worldwide death and cases to HTML. 
             $("#deathToll").text(deaths);
             $("#caseToll").text(cases);
 
-            // Italy Data
-
+            
+            //Italy Count
             var italyCases = 0; 
             var italyDeaths = 0;
 
-            // US Data
+            // US Count
             usCases = 0;
             usDeaths = 0;
 
-            //Iran Data
+            //Iran Count
             iranCases = 0;
             iranDeaths = 0;
 
+            // For loop to gather information in the array that mathes location: Italy, US and Iran
             for ( var x = 0; x < 159; x++) {
             if (response.confirmed.locations[x].country === "US") {
             usCases +=  response.confirmed.locations[x].latest
@@ -58,14 +57,14 @@ $(document).ready(function (){
             
         
 
-
+            // Markers that are set for Italy, US, China and Iran on the Map API.
+            //Adds the Data gathered in the above for loops to markers to display cases and deaths. 
             var earth = new WE.map('earth_div');
             WE.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
     
             var italy = WE.marker([45, 11]).addTo(earth);
             italy.bindPopup("<h1>Italy</h1><ul><li>Confirmed Cases: "  + italyCases + "</li><li>Confirmed Deaths: " + italyDeaths + "</li></ul>", {maxWidth: 150, closeButton: true});
             
-    
             var iran = WE.marker([30, 57]).addTo(earth);
             iran.bindPopup("<h1>Iran</h1><ul><li>Confirmed Cases: "  + iranCases + "</li><li>Confirmed Deaths: " + iranDeaths + "</li></ul>", {maxWidth: 150, closeButton: true});
     
@@ -86,6 +85,7 @@ $(document).ready(function (){
 
     }
 
+    // Calls Map API when document loads. 
     initialize()
 
 
@@ -99,11 +99,11 @@ $(document).ready(function (){
 
 
     
-
+    // Click Event to reveal news articles regarding location
     $(document).on("click", "button", function (e) {
         e.preventDefault();
         var country = $(this).attr("value");
-        
+        //Clears article container every time a button is clicked. 
        $("#articleContainer").empty();
 
     // This is our API key
@@ -133,7 +133,7 @@ $(document).ready(function (){
             var url=response.articles[i].url
             var author=response.articles[i].author
 
-            console.log(response)
+            //Articles Cards are created dynamically for every object in News API array. 
 
             var div1 = $("<div>");
             div1.addClass("eight wide column");
